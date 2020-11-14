@@ -7,6 +7,7 @@ def bubble_sort(array)
         sorted = true
         array[1..-1].each.with_index(1) do |current_value, index|
             if array[index-1] > array[index]
+                #Awesome trick learned from @rlmoser99
                 array[index-1], array[index] = array[index], array[index-1]
                 sorted = false
             end
